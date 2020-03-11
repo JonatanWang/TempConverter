@@ -11,8 +11,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/view/gui.fxml"));
         primaryStage.setTitle("Fahrenheit <--> Celcius Converter");
         Scene scene = new Scene(root, 600, 515);
-        scene.getStylesheets().add(getClass().getResource("/resource/sky.css").toExternalForm());
-        scene.getStylesheets().add(getClass().getResource("/resource/flatred.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("/resource/sky.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("/resource/flatred.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }
