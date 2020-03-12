@@ -36,9 +36,17 @@ public class Controller {
         public void changed(ObservableValue<? extends Number> ov, Number oldValue, Number newValue) {
 
             double fahrenheitTemperature = newValue.doubleValue();
-            fahrenheitTextField.setText(String.valueOf(twoDecimalPlacesFormater.format(fahrenheitTemperature)));
+            String formattedFahrenheitTemperature = String.valueOf(twoDecimalPlacesFormater.format(fahrenheitTemperature));
+            fahrenheitTextField.setText(formattedFahrenheitTemperature);
+
             double celciusTemperature = model.convertFahrenheitToCelcius(fahrenheitTemperature);
-            celsiusTextField.setText(String.valueOf(twoDecimalPlacesFormater.format(celciusTemperature)));
+            String formattedCelciusTemperature = String.valueOf(twoDecimalPlacesFormater.format(celciusTemperature));
+            celsiusTextField.setText(formattedCelciusTemperature);
+
+            // Console output
+            System.out.println("Fahrenheit: " + formattedFahrenheitTemperature);
+            System.out.println("Celcius: " + formattedCelciusTemperature);
+            System.out.println("\n");
         }
     };
 
